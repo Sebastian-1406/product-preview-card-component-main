@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+body {
+    background-color:hsl(30, 38%, 92%);
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 350px;
+    margin: 0 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+}
+.contenedor-imagen img {
+    width: 100%;
+    outline: none;
+}
+.contenedor-imagen .img-desktop{
+    display: none;
+}
+.contenedor-texto{
+    padding: 19px;
+    font-family: 'Montserrat', sans-serif;
+}
+.contenedor-texto .texto-categoria{
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
+}
+.contenedor-texto .sub-titulo{
+    font-family: 'Fraunces', serif;
+    font-size: 2em;
+    color: hsl(212, 21%, 14%);
+    margin: 0.5em 0;
+}
+.contenedor-texto .texto {
+    color: hsl(228, 12%, 48%);
+    font-size: 15px;
+    line-height: 1.5em;
+}
+.contenedor-texto_cart{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.contenedor-texto_cart .cart-precio{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.contenedor-texto_cart .cart-precio .cart-precio_total{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: 2em;
+}
+.contenedor-texto_cart .cart-precio .cart-precio_descuento{
+    text-decoration: line-through 1px;
+    color: hsl(228, 12%, 48%);    
+}
+.contenedor-texto_cart .cart_add{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+@media screen and (min-width:745px) {
+    .contenedor {
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedor-imagen .img-mobile{
+        display: none;
+    }
+    .contenedor-imagen .img-desktop {
+        display: block;
+    }
+    .contenedor-texto {
+        padding: 35px;
+        display: grid;
+    }
+    .contenedor-texto_cart {
+        justify-content: space-between;
+    }
+
+    .contenedor-texto_cart .cart_add {
+        font-size: 16px;
+    }
+    .contenedor-texto .sub-titulo {
+        font-size: 2.8em;
+        margin-bottom: 0;
+    }
+    .contenedor-texto .texto {
+        font-size: 18px;
+        line-height: 1.5em;
+    }
+}
